@@ -6,6 +6,7 @@ window.onload= function(){
     box = document.querySelector("#board");
     box = box.querySelectorAll("div"); 
     msgBox = document.querySelector("#status");
+    let button = document.querySelector ("button");
     
     box.forEach(element => {
         element.classList.add("square");
@@ -27,6 +28,15 @@ window.onload= function(){
             }
           
         });
+        button.addEventListener("click", function(){ 
+            box.forEach(element => {
+                element.classList.add("square");
+                element.innerHTML = "";
+            });
+    
+            msgBox.innerHTML = "Move your mouse over a square and click to play an X or an O.";
+            msgBox.classList.remove("you-won");
+        });
 
         element.addEventListener("mouseover", function(){
             element.classList.add("hover");
@@ -36,5 +46,10 @@ window.onload= function(){
             element.classList.remove("hover");
 
         });
+
+
+
+
+
     });
 }
