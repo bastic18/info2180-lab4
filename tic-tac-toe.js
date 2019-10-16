@@ -38,8 +38,6 @@ window.onload= function(){
             element.classList.remove("hover");
         });
     });
-
-
     const Check = function(tile, boxnum){
         if (tile[0].innerHTML === tile[1].innerHTML && tile[1].innerHTML === tile[2].innerHTML && tile[0].innerHTML === tile[2].innerHTML && tile[2].innerHTML !== "") {   
             boxnum.classList.add("you-won");
