@@ -28,16 +28,16 @@ window.onload= function(){
             }
           
         });
-        button.addEventListener("click", function(){ 
-            box.forEach(element => {
-                element.classList.add("square");
-                element.innerHTML = "";
-            });
     
-            msgBox.innerHTML = "Move your mouse over a square and click to play an X or an O.";
-            msgBox.classList.remove("you-won");
+    button.addEventListener("click", function(){ 
+        box.forEach(element => {
+            element.className= "square";
+            element.innerHTML = "";
         });
 
+        msgBox.innerHTML = "Move your mouse over a square and click to play an X or an O.";
+        msgBox.classList.remove("you-won");
+    });
         element.addEventListener("mouseover", function(){
             element.classList.add("hover");
         });
