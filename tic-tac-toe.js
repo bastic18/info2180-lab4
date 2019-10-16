@@ -1,11 +1,11 @@
 let box; 
 let alternate = false;
-let messageBox;
+let msgBox;
 
 window.onload= function(){ 
     box = document.querySelector("#board");
     box = box.querySelectorAll("div"); 
-    messageBox = document.querySelector("#status");
+    msgBox = document.querySelector("#status");
     
     box.forEach(element => {
         element.classList.add("square");
@@ -28,6 +28,13 @@ window.onload= function(){
           
         });
 
+        element.addEventListener("mouseover", function(){
+            element.classList.add("hover");
+        });
 
+        element.addEventListener("mouseleave", function(){ 
+            element.classList.remove("hover");
+
+        });
     });
 }
